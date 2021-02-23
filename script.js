@@ -1,8 +1,8 @@
 console.log("Is script linked? yes")
 
 const content = document.querySelector (".theDiv")
-const detailContent = document.querySelector(".detailsDiv")
-const url = "https://rawg-video-games-database.p.rapidapi.com/games?page=3"
+// const detailContent = document.querySelector(".detailsDiv")
+const url = "https://rawg-video-games-database.p.rapidapi.com/games?page=4"
 // https://rawg-video-games-database.p.rapidapi.com/games/4332 For å få tak i ett spill med ID
 
 
@@ -16,7 +16,7 @@ listGames = (games) => {
 			break
 		}
 	let newContent = `
-	<a href="./details.html"><ul>
+	<a href="./details.html?id=${i.id}"><ul>
 		<h2>${i.name}</h2>
 		<p>Metacritic Score: ${i.metacritic}</p>
 		<p>Ratings: ${i.ratings_count}</p>
@@ -39,8 +39,10 @@ fetch(url, {
 .then(data => listGames(data))
 .catch(error =>{
 	console.error(error.message);
-	content.innerHTML = `<div class="error">This Does Not Woooork</div>`
+	content.innerHTML = `<div class="error">An error has occurred</div>`
+
 })
 
+.finally(()=> content.classList.remove("spinner-grow"));
 
 

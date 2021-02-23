@@ -1,6 +1,12 @@
+* {
+    color:#000000 !important;
+    text-decoration:none;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(192, 157, 157);
+    
 }
 
 a {
@@ -10,6 +16,31 @@ a {
 
 ul {
     border: 2px solid;
-    background-color: rgb(202, 186, 156);
+    background-color: rgb(194, 194, 194);
+    margin: 10px
 
 }
+
+button {
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(194, 194, 194);
+}
+
+.buttondiv {
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+.spinner-grow {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 50%;
+    bottom: 50%;
+}
+
+
+
