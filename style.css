@@ -15,6 +15,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: gray;
 }
 
 h1 {
@@ -67,24 +68,11 @@ button {
     bottom: 50%;
 }
 
-input{
-    border: 2px;
-}
-
 label {
     display: inline-block;
     width: 150px;
     text-align: right;
     margin: 10px;
-}
-
-input{
-    height: 25px;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-    border: none;
 }
 
 .formDiv{
@@ -95,5 +83,25 @@ input{
 .submitDiv{
     margin-left: auto;
     margin-right: auto;
+}
+
+.theDiv .error{
+display: flex;
+justify-content: center;
+}
+
+
+.error{
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+input{
+    height: 25px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
 }
 
